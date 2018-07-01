@@ -1,4 +1,4 @@
-# MCHobby Arduino Morse Driver (piezo buzzer and digital output) #
+# MCHobby Arduino Morse (piezo buzzer and digital output) #
 
 This driver use the morse standard convention to generate audio and LED morse code.
 
@@ -79,7 +79,11 @@ The Morse Beacon is a sample sketch showing how to transform an Arduino into a r
 
 As Arduino have additional I/O, it is possible to control external material.
 
-This morseBeacon:
+See the ```MorseBeacon.ino``` example sketch.
+
+![Schematic for the beacon sketch](MorseBeacon.png) 
+
+This morseBeacon sample:
 - Activate a COMMUNICATION relay (with NO and NC contact inside) before starting transmission
 - Wait 1 second
 - Transmit a complete message (a second MORSE relais is "pulsed" at the same rate as dot-and-dash morse pulses)
@@ -95,4 +99,3 @@ From 10ms to 500ms for dot. Dot = 100ms is the default.
 Use a second potentiometer to set the tone (acquired at communication start). 
 From 800 to 1600. Mid-position give tone 1200
 
-![Schematic for the beacon sketch](MorseBeacon.png) 
