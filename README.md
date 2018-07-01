@@ -8,7 +8,8 @@ The original code was designed to create an Morse emitter beacon.
 
 ## About this Driver ##
 
-MCHobby invests time and resources providing this open source code.  Please support MCHobby and open-source by purchasing products from MCHobby @ shop.mchobby.be
+MCHobby invests time and resources providing this open source code.  Please support MCHobby and open-source by purchasing products from MCHobby @ [shop.mchobby.be](https://shop.mchobby.be)
+
 
 Written by Meurisse D. for MC Hobby SPRL - [shop.mchobby.be](https://shop.mchobby.be)
 
@@ -29,6 +30,12 @@ The speed can be changed by calling the `morse_speed( dot_len_ms )` method.
 Here is the schematic for the `ArduinoMorseTest.ino` example sketch
 
 ![Schematic for the test sketch](ArduinoMorseTest.png)
+
+This sketch demonstrate how to use the library.
+
+Here an example of audio morse produced with the library (recorded with hand-kind-mp3-recorder).
+
+![MP3 sample](ArduinoMorseTest.mp3)
 
 ### DumpMorseTable ###
 Dump the MorseTable (see `MCHobby_ArduinoMorse.h`) to the serial connexion.
@@ -68,14 +75,18 @@ Dumping the morse table to Serial connection
 ```
 
 ### MorseBeacon ###
-The morseBeacon:
+The Morse Beacon is a sample sketch showing how to transform an Arduino into a repetive morse audio announcer.
+
+As Arduino have additional I/O, it is possible to control external material.
+
+This morseBeacon:
 - Activate a COMMUNICATION relay (with NO and NC contact inside) before starting transmission
 - Wait 1 second
-- Transmit a complete message (a second MORSE relais is activated at the same rate as pulse and dot morse)
+- Transmit a complete message (a second MORSE relais is "pulsed" at the same rate as dot-and-dash morse pulses)
 - deactivate the COMMUNICATION relay
 - Wait for 8 seconds before restaring
 
-A small configuration switch is used to setup the potentiometer more easily. 
+A small configuration switch is used to setup the potentiometers more easily. 
 It continuously morse a "A" char (.-) and acquires speed and tone everytime.
 
 Use a potentiometer to set the speed (acquired at communication start). Mid-position give dot = 100ms
@@ -84,3 +95,4 @@ From 10ms to 500ms for dot. Dot = 100ms is the default.
 Use a second potentiometer to set the tone (acquired at communication start). 
 From 800 to 1600. Mid-position give tone 1200
 
+![Schematic for the beacon sketch](MorseBeacon.png) 
